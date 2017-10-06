@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Answer Page </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="/css/yes-or-no.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    
+    <script type="text/javascript" src="/js/answer.js" ></script>
+
+  </head>
+  <body>
+    <div class="container">
+      <h1> Answer Questions </h1>
+      <hr>
+      <div class="unanswered-questions" >
+        <% unansweredQuestions.forEach(function( question ){ %>
+          <div class="row unanswered-question" >
+            <div class="col-sm-8" >
+              <h3> <%= question %> </h3>
+            </div>
+            <div class="col-sm-4" >
+              <button class="btn btn-success" > Yes </button>
+              <button class="btn btn-danger" > No </button>
+              <button class="btn btn-secondary" > Bad Question </button>
+            </div>
+          </div>
+        <% }); %>       
+      </div>
+    </div>
+  </body>
+</html>
